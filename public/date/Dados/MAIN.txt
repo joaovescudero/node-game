@@ -1,0 +1,49 @@
+Game:
+	Usuario:
+		Id
+		Email
+		Usuario
+		Senha
+		Data de nascimento
+		Questao de seguranca
+		Resposta de seguranca
+		IP
+		Ultimo IP
+	Personagens:
+		Id
+		Nome
+		Classe
+		Level
+		Exp
+		Dinheiro
+		Id_conta
+	Inventario:
+		Id
+		Id_item
+		Quantidade
+		Item_slot
+		Id_perso
+	Skills:
+		Id
+		Skill_id
+		Skill_nivel
+		Id_perso
+	Status:
+		Id
+		For
+		Des
+		Agi
+		Int
+		Sor
+		Id_perso
+	Runas:
+		Id
+		Tipo
+		Id_perso
+	Loja:
+		Id
+		Nome
+		Preco
+		Quantidade
+	Logs:
+		Tudo
