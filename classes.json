@@ -1,0 +1,38 @@
+"warrior": {
+  "icon": "warrior.icon",
+  "nextClass": "Knight",
+  "basicAttributes": {
+    "STR": 3,
+    "VIT": 5,
+    "DEX": 2
+  },
+  "passives": {
+    "VIT": 20,
+    "DamageReduction": 15
+  }
+},
+"Knight": {
+  "icon": "knight.icon",
+  "nextClass": "RoyalGuard",
+  "basicAttributes": {
+    "STR": 7,
+    "VIT": 12,
+    "DEX": 5
+  },
+  "passives": {
+    "STR": 12,
+    "MagicDamageReduction": 25
+  }
+},
+"RoyalGuard": {
+  "icon": "royalGuard.icon",
+  "basicAttributes": {
+    "STR": 15,
+    "VIT": 23,
+    "DEX": 12
+  },
+  "passives": {
+    "VIT": 30,
+    "AllDamageReduction": 25
+  }
+}
