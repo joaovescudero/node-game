@@ -1,38 +1,193 @@
-"warrior": {
-  "icon": "warrior.icon",
-  "nextClass": "Knight",
-  "basicAttributes": {
-    "STR": 3,
-    "VIT": 5,
-    "DEX": 2
+{
+  "Warrior" : {
+    "icon": "warrior.icon",
+    "nextClass": "Knight",
+    "basicAttributes": {
+      "STR": 3,
+      "VIT": 5,
+      "DEX": 2
+    },
+    "passives": {
+      "VIT": 20,
+      "DamageReduction": 15
+    }
   },
-  "passives": {
-    "VIT": 20,
-    "DamageReduction": 15
-  }
-},
-"Knight": {
-  "icon": "knight.icon",
-  "nextClass": "RoyalGuard",
-  "basicAttributes": {
-    "STR": 7,
-    "VIT": 12,
-    "DEX": 5
+  "Knight": {
+    "icon": "knight.icon",
+    "nextClass": "RoyalGuard",
+    "basicAttributes": {
+      "STR": 7,
+      "VIT": 12,
+      "DEX": 5
+    },
+    "passives": {
+      "STR": 12,
+      "MagicDamageReduction": 25
+    }
   },
-  "passives": {
-    "STR": 12,
-    "MagicDamageReduction": 25
-  }
-},
-"RoyalGuard": {
-  "icon": "royalGuard.icon",
-  "basicAttributes": {
-    "STR": 15,
-    "VIT": 23,
-    "DEX": 12
+  "RoyalGuard": {
+    "icon": "royalGuard.icon",
+    "basicAttributes": {
+      "STR": 15,
+      "VIT": 23,
+      "DEX": 12
+    },
+    "passives": {
+      "VIT": 30,
+      "AllDamageReduction": 25
+    }
   },
-  "passives": {
-    "VIT": 30,
-    "AllDamageReduction": 25
+  "Mage": {
+    "icon": "mage.icon",
+    "nextClass": "Wizard",
+    "basicAttributes": {
+      "VIT": 3,
+      "DEX": 1,
+      "INT": 6
+    },
+    "passives": {
+      "INT": 35,
+      "MagicDamage": 30
+    }
+  },
+  "Wizard": {
+    "icon": "wizard.icon",
+    "nextClass": "HighWizard",
+    "basicAttributes": {
+      "VIT": 8,
+      "DEX": 4,
+      "INT": 12
+    },
+    "passives": {
+      "VIT": 30,
+      "DamageReduction": 35
+    }
+  },
+  "HighWizard": {
+    "icon": "highWizard.icon",
+    "nextClass": "HighWizard",
+    "basicAttributes": {
+      "VIT": 15,
+      "DEX": 10,
+      "INT": 25
+    },
+    "passives": {
+      "INT": 30,
+      "VIT": 30
+    }
+  },
+  "Archer": {
+    "icon": "archer.icon",
+    "nextClass": "Ranger",
+    "basicAttributes": {
+      "AGI": 5,
+      "DEX": 3,
+      "LUK": 2
+    },
+    "passives": {
+      "AGI": 50,
+      "CriticalChance": 35
+    }
+  },
+  "Ranger": {
+    "icon": "ranger.icon",
+    "nextClass": "HawkEye",
+    "basicAttributes": {
+      "AGI": 14,
+      "DEX": 5,
+      "LUK": 4
+    },
+    "passives": {
+      "Precise": 50,
+      "DoubleHitChance": 20
+    }
+  },
+  "HawkEye": {
+    "icon": "hawkEye.icon",
+    "basicAttributes": {
+      "AGI": 28,
+      "DEX": 14,
+      "LUK": 18
+    },
+    "passives": {
+      "CriticalDamage": 120,
+      "DEX": 30
+    }
+  },
+  "Alcolyte": {
+    "icon": "alcolyte.icon",
+    "nextClass": "Priest",
+    "basicAttributes": {
+      "STR": 1,
+      "VIT": 6,
+      "DEX": 3
+    },
+    "passives": {
+      "VIT": 40,
+      "Defense": 30
+    }
+  },
+  "Priest": {
+    "icon": "priest.icon",
+    "nextClass": "Archbishop",
+    "basicAttributes": {
+      "STR": 4,
+      "VIT": 12,
+      "DEX": 8
+    },
+    "passives": {
+      "DamageReduction": 25,
+      "Health": 40
+    }
+  },
+  "Archbishop": {
+    "icon": "Archbishop",
+    "basicAttributes": {
+      "STR": 8,
+      "VIT": 25,
+      "DEX": 17
+    },
+    "passives": {
+      "AllDamageReduction": 25,
+      "HealIncrease": 100
+    }
+  },
+  "Thief": {
+    "icon": "thief.icon",
+    "nextClass": "Rogue",
+    "basicAttributes": {
+      "STR": 4,
+      "DEX": 2,
+      "LUK": 4
+    },
+    "passives": {
+      "LUK": 40,
+      "AGI": 30
+    }
+  },
+  "Rogue": {
+    "icon": "rogue.icon",
+    "nextClass": "ShadowChaser",
+    "basicAttributes": {
+      "STR": 10,
+      "DEX": 4,
+      "LUK": 10
+    },
+    "passives": {
+      "Evade": 50,
+      "CriticalDamage": 120
+    }
+  },
+  "ShadowChaser": {
+    "icon": "shadowChaser.icon",
+    "basicAttributes": {
+      "STR": 20,
+      "AGI": 20,
+      "LUK": 10
+    },
+    "passives": {
+      "AGI": 40,
+      "DamageReduction": 15
+    }
   }
 }
