@@ -1,0 +1,23 @@
+{
+  "Angels": {
+    "Leader": "",
+    "basicAttributes": {
+      "VIT": 15,
+      "DEX": 15
+    }
+  },
+  "FallenAngels": {
+    "Leader": "",
+    "basicAttributes": {
+      "LUK": 15,
+      "AGI": 15
+    }
+  },
+  "Deamons": {
+    "Leader": "",
+    "basicAttributes": {
+      "STR": 15,
+      "INT": 15
+    }
+  }
+}
