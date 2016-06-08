@@ -1,6 +1,6 @@
 {
   "name": "node-game",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "A simple node game",
   "author": " Joao Escudero <joaovescudero@gmail.com>",
   "private": true,
