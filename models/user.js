@@ -2,6 +2,7 @@
 
 const mongoose   = require('mongoose');
 const Schema     = mongoose.Schema;
+const bcrypt     = require('bcrypt-nodejs');
 
 const UserSchema = new Schema({
   email: {
@@ -47,6 +48,7 @@ const UserSchema = new Schema({
   toObject: {
     virtuals: true
   },
+  timestamps: true,
   toJSON: {
     virtuals: true
   }
@@ -67,5 +69,22 @@ UserSchema.virtual('age')
 
   return years;
 });
+
+UserSchema.pre('save', function(next) {
+  let user = this;
+  if (!user.isModified('password')) { return next(); }
+  bcrypt.genSalt(10, function(err, salt) {
+    bcrypt.hash(user.password, salt, null, function(err, hash) {
+      user.password = hash;
+      next();
+    });
+  });
+});
+
+UserSchema.methods.comparePassword = function(password, cb) {
+  bcrypt.compare(password, this.password, function(err, isMatch) {
+    cb(err, isMatch);
+  });
+};
 
 module.exports = mongoose.model('User', UserSchema);

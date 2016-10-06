@@ -6,12 +6,12 @@ const CharSchema = require('./char.js');
 const SkillSchema = require('./skill.js');
 
 const CharSkillsSchema = new Schema({
-  skill: [SkillSchema],
+  skill: [{type: Schema.Types.ObjectId, ref: 'SkillSchema'}],
   level: {
     type: Number,
     default: 1
   },
-  char: [CharSchema]
+  char: [{type: Schema.Types.ObjectId, ref: 'CharSchema'}]
 }, {
   toObject: {
     virtuals: true

@@ -29,7 +29,7 @@ const CharStatsSchema = new Schema({
     type: Number,
     default: 0
   },
-  char: [CharSchema]
+  char: [{type: Schema.Types.ObjectId, ref: 'CharSchema'}]
 }, {
   toObject: {
     virtuals: true

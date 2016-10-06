@@ -2,7 +2,6 @@
 
 const mongoose   = require('mongoose');
 const Schema     = mongoose.Schema;
-const CharSchema = require('./char.js');
 
 const EffectSchema = new Schema({
   name: {

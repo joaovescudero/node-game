@@ -2,7 +2,7 @@
 
 const mongoose     = require('mongoose');
 const Schema       = mongoose.Schema;
-const EffectSchema = require('./effect.js');
+const EffectSchema = require('./effect');
 
 const ItemSchema = new Schema({
   name: {
@@ -50,7 +50,7 @@ const ItemSchema = new Schema({
     type: Number,
     default: 0
   },
-  effect: [EffectSchema]
+  effect: [{type: Schema.Types.ObjectId, ref: 'EffectSchema'}]
 }, {
   toObject: {
     virtuals: true

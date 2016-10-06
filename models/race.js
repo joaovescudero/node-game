@@ -14,7 +14,7 @@ const RaceSchema = new Schema({
     type: String,
     required: true
   },
-  leader: [CharSchema]
+  leader: [{type: Schema.Types.ObjectId, ref: 'CharSchema'}]
 }, {
   toObject: {
     virtuals: true

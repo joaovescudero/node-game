@@ -6,7 +6,7 @@ const ItemSchema = require('./item.js');
 const CharSchema = require('./char.js');
 
 const InventorySchema = new Schema({
-  item: [ItemSchema],
+  item: [{type: Schema.Types.ObjectId, ref: 'ItemSchema'}],
   quantity: {
     type: Number,
     default: 1
@@ -15,7 +15,7 @@ const InventorySchema = new Schema({
     type: Number,
     defualt: 0
   },
-  char: [CharSchema]
+  char: [{type: Schema.Types.ObjectId, ref: 'CharSchema'}]
 }, {
   toObject: {
     virtuals: true

@@ -30,7 +30,7 @@ const CharSchema = new Schema({
     type: Number,
     default: 0
   },
-  account: [UserSchema]
+  account: [{type: Schema.Types.ObjectId, ref: 'UserSchema'}]
 }, {
   toObject: {
     virtuals: true
