@@ -1,8 +1,9 @@
 'use strict';
 
 const mongoose   = require('mongoose');
-const Schema     = mongoose.Schema;
 const UserSchema = require('./user.js');
+const Item = require('./item.js');
+const Schema     = mongoose.Schema;
 
 const CharSchema = new Schema({
   name: {
@@ -30,7 +31,13 @@ const CharSchema = new Schema({
     type: Number,
     default: 0
   },
-  account: [{type: Schema.Types.ObjectId, ref: 'UserSchema'}]
+  stats: Object,
+  equipment: [{type: Schema.Types.ObjectId, ref: 'Item'}],
+  account: [{type: Schema.Types.ObjectId, ref: 'UserSchema'}],
+  reborns: {
+    type: Number,
+    default: 0
+  }
 }, {
   toObject: {
     virtuals: true

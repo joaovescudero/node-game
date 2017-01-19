@@ -1,6 +1,7 @@
 {
   "Warrior" : {
     "icon": "warrior.icon",
+    "pastClasses": [],
     "nextClass": "Knight",
     "basicAttributes": {
       "STR": 3,
@@ -14,6 +15,7 @@
   },
   "Knight": {
     "icon": "knight.icon",
+    "pastClasses": ["Warrior"],
     "nextClass": "RoyalGuard",
     "basicAttributes": {
       "STR": 7,
@@ -27,6 +29,7 @@
   },
   "RoyalGuard": {
     "icon": "royalGuard.icon",
+    "pastClasses": ["Warrior", "Knight"],
     "basicAttributes": {
       "STR": 15,
       "VIT": 23,
@@ -39,6 +42,7 @@
   },
   "Mage": {
     "icon": "mage.icon",
+    "pastClasses": [],
     "nextClass": "Wizard",
     "basicAttributes": {
       "VIT": 3,
@@ -52,6 +56,7 @@
   },
   "Wizard": {
     "icon": "wizard.icon",
+    "pastClasses": ["Mage"],
     "nextClass": "HighWizard",
     "basicAttributes": {
       "VIT": 8,
@@ -65,6 +70,7 @@
   },
   "HighWizard": {
     "icon": "highWizard.icon",
+    "pastClasses": ["Mage", "Wizard"],
     "nextClass": "HighWizard",
     "basicAttributes": {
       "VIT": 15,
@@ -78,6 +84,7 @@
   },
   "Archer": {
     "icon": "archer.icon",
+    "pastClasses": [],
     "nextClass": "Ranger",
     "basicAttributes": {
       "AGI": 5,
@@ -91,6 +98,7 @@
   },
   "Ranger": {
     "icon": "ranger.icon",
+    "pastClasses": ["Archer"],
     "nextClass": "HawkEye",
     "basicAttributes": {
       "AGI": 14,
@@ -104,6 +112,7 @@
   },
   "HawkEye": {
     "icon": "hawkEye.icon",
+    "pastClasses": ["Archer", "Ranger"],
     "basicAttributes": {
       "AGI": 28,
       "DEX": 14,
@@ -116,6 +125,7 @@
   },
   "Alcolyte": {
     "icon": "alcolyte.icon",
+    "pastClasses": [],
     "nextClass": "Priest",
     "basicAttributes": {
       "STR": 1,
@@ -129,6 +139,7 @@
   },
   "Priest": {
     "icon": "priest.icon",
+    "pastClasses": ["Alcolyte"],
     "nextClass": "Archbishop",
     "basicAttributes": {
       "STR": 4,
@@ -142,6 +153,7 @@
   },
   "Archbishop": {
     "icon": "Archbishop",
+    "pastClasses": ["Alcolyte", "Priest"],
     "basicAttributes": {
       "STR": 8,
       "VIT": 25,
@@ -154,6 +166,7 @@
   },
   "Thief": {
     "icon": "thief.icon",
+    "pastClasses": [],
     "nextClass": "Rogue",
     "basicAttributes": {
       "STR": 4,
@@ -167,6 +180,7 @@
   },
   "Rogue": {
     "icon": "rogue.icon",
+    "pastClasses": ["Thief"],
     "nextClass": "ShadowChaser",
     "basicAttributes": {
       "STR": 10,
@@ -180,6 +194,7 @@
   },
   "ShadowChaser": {
     "icon": "shadowChaser.icon",
+    "pastClasses": ["Thief", "Rogue"],
     "basicAttributes": {
       "STR": 20,
       "AGI": 20,

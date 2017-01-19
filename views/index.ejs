@@ -3,6 +3,14 @@
   <head>
     <title><%= title %></title>
     <link rel='stylesheet' href='/stylesheets/style.css' />
+    <script src='/socket.io/socket.io.js'></script>
+    <script>
+      var socket = io.connect('http://localhost:8888');
+      socket.on('news', function (data) {
+        document.write(data.hw);
+        socket.emit('my other event', { my: 'data' });
+      });
+    </script>
   </head>
   <body>
     <header class="header">

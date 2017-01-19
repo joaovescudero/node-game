@@ -1,8 +1,7 @@
 'use strict';
 
-const mongoose     = require('mongoose');
-const Schema       = mongoose.Schema;
-const EffectSchema = require('./effect');
+const mongoose = require('mongoose');
+const Schema = mongoose.Schema;
 
 const ItemSchema = new Schema({
   name: {
@@ -26,31 +25,36 @@ const ItemSchema = new Schema({
     type: Number,
     default: 0
   },
-  strength: {
-    type: Number,
-    default: 0
+  stats: {
+    type: Object,
+    default: {
+      STR: {
+        type: Number,
+        default: 0
+      },
+      VIT: {
+        type: Number,
+        default: 0
+      },
+      DEX: {
+        type: Number,
+        default: 0
+      },
+      AGI: {
+        type: Number,
+        default: 0
+      },
+      INT: {
+        type: Number,
+        default: 0
+      },
+      LUK: {
+        type: Number,
+        default: 0
+      }
+    }
   },
-  vitality: {
-    type: Number,
-    default: 0
-  },
-  dexterity: {
-    type: Number,
-    default: 0
-  },
-  agility: {
-    type: Number,
-    default: 0
-  },
-  intelligence: {
-    type: Number,
-    default: 0
-  },
-  lucky: {
-    type: Number,
-    default: 0
-  },
-  effect: [{type: Schema.Types.ObjectId, ref: 'EffectSchema'}]
+  effect: Object
 }, {
   toObject: {
     virtuals: true

@@ -1,4 +1,7 @@
+/*jshint esversion: 6 */
+/*jslint node: true */
 'use strict';
+
 const express = require('express');
 const user = express.Router();
 const UserSchema = require('../models/user.js');
@@ -6,6 +9,7 @@ const jwt = require('jwt-simple');
 const auth = require('../util/auth.js');
 
 /* GET users listing. */
+
 user.post('/register', function(req, res) {
   let user = new UserSchema({
     email: req.body.email,
@@ -24,7 +28,7 @@ user.post('/register', function(req, res) {
   });
 });
 
-user.post('/login', function(req, res, next) {
+user.post('/login', function(req, res) {
   UserSchema.findOne({username: req.body.username}, (err, userFound) => {
     if(!userFound) {
       return res.status(401).json({message: 'Wrong username and/or password'});
@@ -42,6 +46,6 @@ user.post('/login', function(req, res, next) {
       res.send({token: auth.createJWT(userFound)});
     });
   });
-})
+});
 
 module.exports = user;

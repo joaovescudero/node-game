@@ -43,34 +43,3 @@ exports.ensureAuthenticated = (req, res, next) => {
   
   next();
 };
-
-exports.ensureAdminAuthenticated = (req, res, next) => {
-  if(!req.headers.authorization) {
-    return res.status(401).send({message: 'Please make sure your request has an Authorization header'});
-  }
-
-  let token = req.headers.authorization.split(' ')[1];
-  let payload = null;
-  
-  try {
-    payload = jwt.decode(token, 'nodegameasdasasdsadssa');
-  } catch (err) {
-    return res.status(401).send({message: err.message});
-  }
-
-  if(payload.exp <= moment().unix()) {
-    return res.status(401).send({message: 'Token has expired'});
-  }
-
-  User.findOne({_id: payload.sub}, (err, user) => {
-    if(err || !user)
-      return res.status(401).send({message: `Err ${err.msg}`});
-    
-    if(user.role === 'ADMIN') {
-      req.user = payload.sub;
-      next();
-    } else {
-      return res.status(401).send({message: 'Please check if you are admin'});
-    }
-  });
-};

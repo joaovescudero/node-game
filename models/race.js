@@ -2,7 +2,7 @@
 
 const mongoose   = require('mongoose');
 const Schema     = mongoose.Schema;
-const CharSchema = require('./char.js');
+const Char = require('./char.js');
 
 const RaceSchema = new Schema({
   name: {
@@ -10,11 +10,11 @@ const RaceSchema = new Schema({
     required: true,
     unique: true
   },
-  bonus: {
-    type: String,
+  basicAttributes: {
+    type: Object,
     required: true
   },
-  leader: [{type: Schema.Types.ObjectId, ref: 'CharSchema'}]
+  leader: [{type: Schema.Types.ObjectId, ref: 'Char'}]
 }, {
   toObject: {
     virtuals: true

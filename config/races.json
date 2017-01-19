@@ -3,7 +3,7 @@
     "Leader": "",
     "basicAttributes": {
       "VIT": 15,
-      "DEX": 15
+      "STR": 15
     }
   },
   "FallenAngels": {
@@ -16,8 +16,8 @@
   "Deamons": {
     "Leader": "",
     "basicAttributes": {
-      "STR": 15,
-      "INT": 15
+      "INT": 15,
+      "DEX": 15
     }
   }
 }
